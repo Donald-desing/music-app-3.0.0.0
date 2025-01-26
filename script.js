@@ -40,13 +40,11 @@ audioPlayer.addEventListener('ended', function() {
 });
 
 volumeControl.addEventListener('input', function(event) {
-    console.log('Volume changed:', event.target.value); // Log volume changes
     audioPlayer.volume = event.target.value;
 });
 
 toggleDarkModeButton.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
-    console.log('Dark mode toggled'); // Log dark mode toggle
 });
 
 shuffleButton.addEventListener('click', function() {
