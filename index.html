@@ -1,36 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline Music Player</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="all-songs.html">All Songs</a>
-    </nav>
-    <div class="player">
-        <div class="controls">
-            <input type="file" id="fileInput" accept="audio/*">
-            <button id="addToPlaylist">Add to Playlist</button>
-            <button id="shuffle">Shuffle</button>
-            <button id="repeat">Repeat</button>
-            <button id="toggleDarkMode">Dark Mode</button>
-            <button id="skipBack">Back 10s</button>
-            <button id="skipForward">Forward 10s</button>
-            <button id="previousTrack">Previous</button>
-            <button id="nextTrack">Next</button>
-            <input type="range" id="volumeControl" min="0" max="1" step="0.1">
-        </div>
-        <div class="playlist">
-            <ul id="playlist"></ul>
-        </div>
-        <audio id="audioPlayer" controls></audio>
-        <progress id="progressBar" value="0" max="1"></progress>
-        <p id="currentTrack"></p>
-    </div>
-    <script src="script.js"></script>
-</body>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Offline Music Player</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <header>  
+        <h1>Offline Music Player</h1>  
+    </header>  
+    <nav>  
+        <input type="file" id="fileInput" accept="audio/*" multiple>  
+        <button onclick="createPlaylist()">Create Playlist</button>  
+        <div class="dropdown">  
+            <button class="dropbtn">Playlists</button>  
+            <div class="dropdown-content" id="playlistDropdown"></div>  
+        </div>  
+    </nav>  
+    <main>  
+        <div id="player">  
+            <audio id="audioPlayer" controls></audio>  
+            <h2 id="currentSong">Select a song to play</h2>  
+        </div>  
+        <ul id="trackList"></ul>  
+    </main>  
+    <footer>  
+        <p>© 2025 Offline Music Player</p>  
+    </footer>  
+    <script src="script.js"></script>  
+</body>  
 </html>
